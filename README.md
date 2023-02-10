@@ -7,7 +7,7 @@ Inherit assets in a decentralized way. Inheritas is a service to make assets inh
 The Inheritas Service was developed by J.Valeska as a Final Project in the Web3 Degree at Alchemy University. Class 2022-2023. 
 
 This project is under continous development. The current version is almost ready for 
-production but some small changes and improvements would be needed.
+production but some small changes and improvements could be implemented.
 
 ## Live Project
 
@@ -109,7 +109,7 @@ Big thanks to everyone on the Alchemy team and to everyone who supports free edu
 
 ## Potential TODOs
 
-- Make the UI fully responsive and add a margin top to the footer. (MUST DO)
+- Make the UI fully responsive and add a margin top to the footer. (MUST TO DO)
 - ERC20 support
 - Future standards support
 - Multi-wallet support
