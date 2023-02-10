@@ -1,0 +1,39 @@
+<svg
+   xmlns="http://www.w3.org/2000/svg"
+   style="fill:none;stroke:#1dc071"
+   id="svg11"
+   version="1.1"
+   viewBox="0 0 20 20"
+   height="24"
+   width="24">
+  <defs
+     id="defs15" />
+  <g
+     transform="translate(-2,-2)"
+     style="stroke-width:0"
+     id="SVGRepo_bgCarrier" />
+  <g
+     transform="translate(-2,-2)"
+     style="stroke-linecap:round;stroke-linejoin:round"
+     id="SVGRepo_tracerCarrier" />
+  <g
+     transform="translate(-2,-2)"
+     id="SVGRepo_iconCarrier">
+    <circle
+       style="stroke:#1dc071;stroke-width:2"
+       id="circle4"
+       r="9"
+       cy="12"
+       cx="12" />
+    <circle
+       style="fill:#1dc071;stroke:#1dc071"
+       id="circle6"
+       r="0.5"
+       cy="18"
+       cx="12" />
+    <path
+       style="stroke:#1dc071;stroke-width:2"
+       id="path8"
+       d="m 12,16 v -1.4189 c 0,-0.9442 0.6042,-1.7825 1.5,-2.0811 v 0 C 14.3958,12.2014 15,11.3631 15,10.4189 V 9.90569 C 15,8.30092 13.6991,7 12.0943,7 H 12 C 10.3431,7 9,8.34315 9,10 v 0" />
+  </g>
+</svg>
