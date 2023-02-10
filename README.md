@@ -11,7 +11,7 @@ production but some small changes and improvements would be needed.
 
 ## Live Project
 
-https://inheritas3.web.app(https://inheritas3.web.app)
+https://inheritas3.web.app
 
 ## Project Setup
 
@@ -141,7 +141,7 @@ Feel free to reach me with any proposal or commentary in the Alchemy University 
 
 Feel free to send some ETH to my Ethereum mainnet wallet: 
 ```
-
+0xf8d4DEda6726134d5F1B506dc7bD6c407cFF64dF
 ```
 Donators and investors could be rewarded in my next projects. Thanks! PLW3!
 
