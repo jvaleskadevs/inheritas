@@ -11,7 +11,11 @@ production but some small changes and improvements could be implemented.
 
 ## Live Project
 
+- dApp
 https://inheritas3.web.app
+- Goerli contract
+https://goerli.etherscan.io/address/0xc7810AAD088EbfE1e29C9edf48D6a18FD0057B5c
+
 
 ## Project Setup
 
