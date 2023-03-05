@@ -7,6 +7,7 @@
 const hre = require("hardhat");
 
 async function main() {
+  //const Inheritas = await hre.ethers.getContractFactory("InheritasDiamondPass");
   const Inheritas = await hre.ethers.getContractFactory("Inheritas");
   const inheritas = await Inheritas.deploy();
 
@@ -15,6 +16,12 @@ async function main() {
   console.log(
     `Inheritas contract deployed to ${inheritas.address}`
   );
+  
+  /*
+  await inheritas.safeMint("0xC78B5f5e135E1e5A6f7Ffb30409DB8f8f263B421",
+   	{value: hre.ethers.utils.parseEther('0.01')});
+  */
+  
 }
 
 // We recommend this pattern to be able to use async/await everywhere

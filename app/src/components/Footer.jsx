@@ -1,4 +1,4 @@
-import { githubIcon, etherscanIcon, love } from '../assets';
+import { githubIcon, etherscanIcon, love, alchemy } from '../assets';
 import { inheritasAddress } from '../constants';
 
 const Footer = () => {
@@ -17,10 +17,16 @@ const Footer = () => {
 				</div>
 			</a>
 		</div>
+		<div className="flex flex-row bg-black text-white font-bold mb-2 px-4 py-2 rounded-[10px]">
+			<span className="w-[24px] h-[24px] rounded-[10px] flex mx-1">
+				<img src={alchemy} alt="love" />
+			</span> <small className="font-medium">Powered by </small> Alchemy
+			
+		</div>
 		<div className="flex flex-row text-white font-bold mb-2 ">
 			Made with <span className="w-[24px] h-[24px] rounded-[10px] flex mx-1">
 				<img src={love} alt="love" />
-			</span> by @J.Valeska / @MaestroCripto · Alchemy University Final Project · 2022/2023
+			</span> by @J.Valeska (AU) / @MaestroCripto (DISCORD) · Alchemy SDK Challenge · 2023
 		</div>
 	</div>
 	);

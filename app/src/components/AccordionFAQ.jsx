@@ -29,6 +29,48 @@ function AccordionFAQ() {
 				<div className="py-5">
 					<details className="group">
 						<summary className="flex justify-between items-center font-medium cursor-pointer list-none">
+							<span> What kind of assets Inheritas support?</span>
+							<span className="transition group-open:rotate-180">
+				        <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path>
+		</svg>
+				      </span>
+						</summary>
+						<p className="text-neutral-500 mt-3 group-open:animate-fadeIn">
+							The Inheritas service supports every kind of web3 asset following the standards ERC20, ERC721 and ERC1155. But some limitations apply to fungible tokens.
+						</p>
+					</details>
+				</div>
+				<div className="py-5">
+					<details className="group">
+						<summary className="flex justify-between items-center font-medium cursor-pointer list-none">
+							<span> What kind of limitations do the fungible tokens have?</span>
+							<span className="transition group-open:rotate-180">
+				        <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path>
+		</svg>
+				      </span>
+						</summary>
+						<p className="text-neutral-500 mt-3 group-open:animate-fadeIn">
+							While having 1 beneficiary per tokenID works well for non-fungible tokens. Fungible tokens should allow more flexibility, like multiple beneficiaries. But currently ERC20 tokens only supports 1 beneficiary per token (contract address) and ERC1155 tokens are limited to 1 beneficiary per tokenID (within the same contract). Multiple beneficiaries support will be added soon.
+						</p>
+					</details>
+				</div>
+				<div className="py-5">
+					<details className="group">
+						<summary className="flex justify-between items-center font-medium cursor-pointer list-none">
+							<span> Why ether is not supported?</span>
+							<span className="transition group-open:rotate-180">
+				        <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path>
+		</svg>
+				      </span>
+						</summary>
+						<p className="text-neutral-500 mt-3 group-open:animate-fadeIn">
+							The native token of the Ethereum blockchain does not allow token allowances nor approvals. But Inheritas offers full support for ether inheritance trough the wrapped ether token, WETH.
+						</p>
+					</details>
+				</div>
+				<div className="py-5">
+					<details className="group">
+						<summary className="flex justify-between items-center font-medium cursor-pointer list-none">
 							<span> How does Inheritas work?</span>
 							<span className="transition group-open:rotate-180">
 				        <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path>
@@ -36,14 +78,14 @@ function AccordionFAQ() {
 				      </span>
 						</summary>
 						<p className="text-neutral-500 mt-3 group-open:animate-fadeIn">
-							The Inheritas service takes advantage of the approval method. As long as the approval is not revoked, the contract can send the asset from the registrant's wallet to the beneficiary's wallet when the beneficiary claims it after the date specified by the registrant has been reached. The beneficiary only need the Inheritas assetID
+							The Inheritas service takes advantage of the approval method. As long as the approval is not revoked, the contract can send the asset from the registrant's wallet to the beneficiary's wallet when the beneficiary claims it after the date specified by the registrant has been reached. The beneficiary only needs the Inheritas assetID
 						</p>
 					</details>
 				</div>
 				<div className="py-5">
 					<details className="group">
 						<summary className="flex justify-between items-center font-medium cursor-pointer list-none">
-							<span> How does the asset claim work?</span>
+							<span> How does the claim asset work?</span>
 							<span className="transition group-open:rotate-180">
 				        <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path>
 		</svg>
@@ -64,7 +106,7 @@ function AccordionFAQ() {
 				      </span>
 						</summary>
 						<p className="text-neutral-500 mt-3 group-open:animate-fadeIn">
-							The Inheritas assetID is the keccak hash of the asset contract address and the asset tokenID. The beneficiary could claim the asset just by knowing which asset it is.
+							The Inheritas assetID is the keccak hash of the registrant wallet address, the asset contract address and the asset tokenID. The beneficiary could claim the asset just by knowing which asset it is and who owns it.
 						</p>
 					</details>
 				</div>
@@ -78,28 +120,42 @@ function AccordionFAQ() {
 				      </span>
 						</summary>
 						<p className="text-neutral-500 mt-3 group-open:animate-fadeIn">
-							The Inheritas service charges a small fee for each new asset registered in the service. Current fee: 0.01 eth. Inheritas also offers a LifeTime Pass with FREE access to register an unlimited number of assets in the service by 0.1 eth.
+							The Inheritas service charges a small fee for each new asset registered in the service. Current fee: 0.01 eth. Inheritas also offers a Diamond Pass with FREE access to register an unlimited number of assets in the service by 0.1 eth. The Inheritas Diamond Pass NFT holders may claim the Diamond Pass access by burning the IDP NFT.
 						</p>
 					</details>
 				</div>
 				<div className="py-5">
 					<details className="group">
 						<summary className="flex justify-between items-center font-medium cursor-pointer list-none">
-							<span> Can anyone revoke my LifeTime Pass?</span>
+							<span> How the claim works for IDP holders?</span>
 							<span className="transition group-open:rotate-180">
 				        <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path>
 		</svg>
 				      </span>
 						</summary>
 						<p className="text-neutral-500 mt-3 group-open:animate-fadeIn">
-							The administrator has limited privileges over the contract, but may still be able to ban access to some malicious users who use a LifeTime Pass.
+							The Inheritas Diamond Pass NFT holders may claim the Diamond Pass access by burning the IDP NFT. Just go to the Diamond Pass section and press claim. After successfully claiming the Diamond Pass you will be able to register unlimited assets on the Inheritas service for FREE. 
 						</p>
 					</details>
 				</div>
 				<div className="py-5">
 					<details className="group">
 						<summary className="flex justify-between items-center font-medium cursor-pointer list-none">
-							<span> Can I get a refund of my fee/LifeTime Pass?</span>
+							<span> Can anyone revoke my Diamond Pass?</span>
+							<span className="transition group-open:rotate-180">
+				        <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path>
+		</svg>
+				      </span>
+						</summary>
+						<p className="text-neutral-500 mt-3 group-open:animate-fadeIn">
+							The administrator has limited privileges over the contract, but may still be able to ban access to some malicious users who use a Diamond Pass.
+						</p>
+					</details>
+				</div>
+				<div className="py-5">
+					<details className="group">
+						<summary className="flex justify-between items-center font-medium cursor-pointer list-none">
+							<span> Can I get a refund of my fee/Diamond Pass?</span>
 							<span className="transition group-open:rotate-180">
 				        <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path>
 		</svg>
@@ -190,7 +246,7 @@ function AccordionFAQ() {
 				      </span>
 						</summary>
 						<p className="text-neutral-500 mt-3 group-open:animate-fadeIn">
-							Legally speaking, an inheritance is not taking place, but rather the beneficiary is transferring an asset that has previously been approved for transfer. The contract holds the approval until the date is reached. After that, the beneficiary can transfer the asset to another wallet. The use of this service is not limited to inheritances and could be used in other ways.
+							Legally speaking, an inheritance is not taking place, but rather the beneficiary is transferring an asset that has previously been approved for transfer. The contract holds the approval until the date is reached. After that, the beneficiary can transfer the asset to their wallet. The use of this service is not limited to inheritances and could be used in many other ways.
 						</p>
 					</details>
 				</div>

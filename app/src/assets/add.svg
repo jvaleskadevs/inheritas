@@ -1,8 +1,12 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
-<svg width="64px" height="64px" viewBox="0 0 24.00 24.00" id="meteor-icon-kit__solid-duplicate" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#000000" stroke-width="0.00024000000000000003">
-<g id="SVGRepo_bgCarrier" stroke-width="0"/>
-<g id="SVGRepo_iconCarrier">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M18 4H9C6.23858 4 4 6.23858 4 9V18H3C1.34315 18 0 16.6569 0 15V3C0 1.34315 1.34315 0 3 0H15C16.6569 0 18 1.34315 18 3V4ZM16 14V11.25C16 10.5596 15.5523 10 15 10C14.4477 10 14 10.5596 14 11.25V14H11.25C10.5596 14 10 14.4477 10 15C10 15.5523 10.5596 16 11.25 16H14V18.75C14 19.4404 14.4477 20 15 20C15.5523 20 16 19.4404 16 18.75V16H18.75C19.4404 16 20 15.5523 20 15C20 14.4477 19.4404 14 18.75 14H16ZM9 6H21C22.6569 6 24 7.34315 24 9V21C24 22.6569 22.6569 24 21 24H9C7.34315 24 6 22.6569 6 21V9C6 7.34315 7.34315 6 9 6Z" fill="#1dc071"/>
-</g>
-</svg>
+
+
+<svg width="24px" height="24px" viewBox="2 1 20 22" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#000000">
+
+<g id="SVGRepo_bgCarrier" stroke-width="0"/>
+
+<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+
+<g id="SVGRepo_iconCarrier"> <path d="M15.5 10.6499H8.5" stroke="#1dc071" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/> <path d="M12 7.20996V14.21" stroke="#1dc071" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/> <path d="M16.8199 2H7.17995C5.04995 2 3.31995 3.74 3.31995 5.86V19.95C3.31995 21.75 4.60995 22.51 6.18995 21.64L11.0699 18.93C11.5899 18.64 12.4299 18.64 12.9399 18.93L17.8199 21.64C19.3999 22.52 20.6899 21.76 20.6899 19.95V5.86C20.6799 3.74 18.9499 2 16.8199 2Z" stroke="#1dc071" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> </g>
+
+</svg>

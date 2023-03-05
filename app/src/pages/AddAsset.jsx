@@ -1,21 +1,24 @@
 /* global BigInt */
 import { useState } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation, Link } from 'react-router-dom';
 
-import { ethers } from 'ethers';
+import { Utils } from 'alchemy-sdk';
+
 import { CustomButton, FormField, Loader } from '../components';
 
 
-const AddAsset = ({ inheritas, approveAsset, hasLifeTimePass, setToast, isLoading, setIsLoading, onNewAssetEvent }) => {
+const AddAsset = ({ inheritas, approveAsset, hasDiamondPass, hasIDPNFT, setToast, isLoading, setIsLoading, onNewAssetEvent }) => {
 	const navigate = useNavigate();
 	const { state } = useLocation();
 
 	const [form, setForm] = useState({
 		deadline: "",
-		beneficiary: ""
+		beneficiary: "",
+		amount: state.tokenType === 'ERC721' ? "1" : ""
 	});	
 	
 	const handleFormFieldChange = (fieldName, e) => {
+		if (fieldName === "amount" && state.tokenType === 'ERC721') return;
 		setForm({ ...form, [fieldName]: e.target.value });
 	}
 	
@@ -34,15 +37,16 @@ const AddAsset = ({ inheritas, approveAsset, hasLifeTimePass, setToast, isLoadin
 		setIsLoading(true);
 		
 		try {
+			state.amount = (form.amount * (10**state.decimals)).toString();
 			await approveAsset({...state});
-
 			await inheritas.active(
 				BigInt(Math.floor(new Date(form.deadline).getTime() / 1000).toString()),
 				form.beneficiary,
-				state.contract.address,
-				state.tokenId,
-				state.tokenType === "ERC721" ? 0 : state.tokenType === "ERC1155" ? 1 : null,
-				!hasLifeTimePass ? { value: ethers.utils.parseEther("0.01") } : { value: 0}
+				state.contractAddress || state.contract?.address,
+				state.tokenId || 0,
+				state.tokenType === "ERC721" ? 0 : state.tokenType === "ERC1155" ? 1 : state.tokenBalance ? 2 : null,
+				state.decimals ? (form.amount * (10**state.decimals)).toString() : form.amount,
+				!hasDiamondPass ? { value: Utils.parseEther("0.01") } : { value: 0}
 			);
 			setToast(true, "Transaction sent");
 			
@@ -81,6 +85,37 @@ const AddAsset = ({ inheritas, approveAsset, hasLifeTimePass, setToast, isLoadin
 					value={form.beneficiary}
 					handleChange={(e) => handleFormFieldChange('beneficiary', e)}
 				/>
+				
+				{ //state.tokenBalance && (
+					<FormField
+						labelName="Amount"
+						placeholder={`Max: ${state.tokenBalance / Math.pow(10, state.decimals)}`}
+						inputType="value"
+						value={form.amount}
+						handleChange={(e) => handleFormFieldChange('amount', e)}
+					/>					
+				}
+				
+				<FormField
+					labelName="Price"
+					placeholder=""
+					inputType="text"
+					value={ hasDiamondPass 
+							? 'FREE · DiamondPass'
+							: '0.01 ether'
+					}
+					readOnly
+				/>
+				
+				{ hasIDPNFT ? 
+				<h3 className="font-epilogue font-normal text-[14px] text-[#808191] leading-[22px] text-justify mx-[16px] mt-[-24px]">
+					* You can claim your <Link to="/diamondpass"><u>Diamond Pass</u></Link> and get unlimited FREE access to the Inheritas service (only for IDP holders)
+				</h3>  : 
+				<h3 className="font-epilogue font-normal text-[14px] text-[#808191] leading-[22px] text-justify mx-[16px] mt-[-24px]">
+					* Buy a <Link to="/diamondpass"><u>Diamond Pass</u></Link> and get unlimited FREE access to the Inheritas service by only 0.1 ether
+				</h3>				
+				}
+				
 				
 				<div className="flex justify-center items-center mt-[40px]">
 					<CustomButton 

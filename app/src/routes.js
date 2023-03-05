@@ -1,4 +1,4 @@
-import { portfolio, selectAsset, claimAsset, faq, pass } from './assets';
+import { portfolio, selectAsset, claimAsset, faq, pass, recent } from './assets';
 
 export const navLinks = [
 	{
@@ -17,13 +17,18 @@ export const navLinks = [
 		link: '/claim-asset'
 	},
 	{
+		name: 'history',
+		imgUrl: recent,
+		link: '/history'
+	},
+	{
 		name: 'faq',
 		imgUrl: faq,
 		link: '/faq'
 	},
 	{
-		name: 'lifetimepass',
+		name: 'diamondpass',
 		imgUrl: pass,
-		link: '/lifetimepass'
+		link: '/diamondpass'
 	}
 ];

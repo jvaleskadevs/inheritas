@@ -18,6 +18,8 @@ import copySuccess from './copy-success.svg';
 import etherscanIcon from './etherscan.svg';
 import githubIcon from './github.svg';
 import love from './love.svg';
+import recent from './recent.svg';
+import alchemy from './alchemy.svg';
 
 export {
   logo,
@@ -39,5 +41,7 @@ export {
   pass,
   etherscanIcon,
   githubIcon,
-  love
+  love,
+  recent,
+  alchemy
 };
