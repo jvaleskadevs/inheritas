@@ -11,7 +11,7 @@ production but some small changes and improvements would be needed.
 
 ## Live Project
 
-https://inheritas3.web.app(https://inheritas3.web.app)
+[https://inheritas3.web.app](https://inheritas3.web.app)
 
 ## Project Setup
 
