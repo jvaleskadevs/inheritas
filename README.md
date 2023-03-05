@@ -89,10 +89,10 @@ Big thanks to everyone on their teams and to everyone who supports Open Source a
 
 ## Alchemy SDK & enhaced APIs Stack
 
-- FetchNftsForOwner · Fetch all NFT for an address
-- FetctTokenBalances · Fetch all token balances for an address
-- FetchTokenMetadata · Fetch the token metadata
-- FetchNftMetadata · Fetch the NFT metadata
+- GetNftsForOwner · Fetch all NFT for an address
+- GetTokenBalances · Fetch all token balances for an address
+- GetTokenMetadata · Fetch the token metadata
+- GetNftMetadata · Fetch the NFT metadata
 - GetLogs · Fetch all logs from an smart contract
 - NftsSpamFilter · Filter spam NFTs (only working in ETH Mainnet)
 
